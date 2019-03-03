@@ -22,7 +22,7 @@ import com.registration.services.UserService;
 public class RegistrationController {
 
 	@Autowired
-	UserService userService; 
+	UserService userService;
 	
 	@Autowired
 	CourseService courseService;
