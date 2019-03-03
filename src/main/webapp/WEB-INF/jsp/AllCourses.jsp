@@ -6,7 +6,7 @@
 	<div class="table-responsive">
 		<table class="table table-striped table-boarder">
 			<thead>
-				<tr>
+				<tr> 
 					<th>ID</th>
 					<th>CourseName</th>
 					<th>Description</th>
