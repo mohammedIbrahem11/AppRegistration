@@ -1,0 +1,76 @@
+/* Start div footer*/
+.footer{
+    background: #111;
+    color: #EEE;
+    //padding: 20px;
+    padding-top: 40px;
+}
+.footer h2
+{
+    color: #ff6666;
+}
+.footer a
+{
+    color: #AAA;
+}
+.footer li
+{
+    font-size: 15px;
+}
+.footer a:hover
+{
+    color: #FFF;
+}
+.footer .Sitemap li
+{
+    width: 33.3333%;
+    float: left;
+    padding: 5px 0;
+
+}
+
+.footer .social-list img
+{
+    width: 40px;
+    height: 40px;
+}
+
+.footer .social-list li
+{
+    margin-top: 10px;
+    width: 33.3333%;
+    float: left;
+    opacity: 0.7;
+    padding: 5px 0;
+
+}
+.footer .social-list li:hover
+{
+    opacity: 1;
+    -webkit-transition:all 0.7s ease-in-out;
+    -moz-transition:all 0.7s ease-in-out;
+    -o-transition:all 0.7s ease-in-out;
+    transition:all 0.7s ease-in-out;
+}
+/*.media-object
+{
+    width: 60px;
+    height: 60px;
+}*/
+.footer .CustonerServ
+{
+    margin: 10px;
+    padding: 10px;
+}
+.footer .coprright
+{
+    background: #333;
+    color: #EEE;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 18px;
+}
+.footer .coprright span
+{
+    color: #ff6666;
+}

@@ -1,0 +1,15 @@
+
+<nav role="navigation" class="navbar navbar-inverse">
+	<div>
+		<a href="/welcome" class="navbar-brand">Elhusary Center</a>
+	</div>
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li><a href="/register">Registration</a></li>
+			<!-- <li><a href="/unregister">Unregister</a></li> -->
+			<li><a href="/show-users?username=${name}">All Users</a></li>
+			<li><a href="/show-courses">All Coursed</a></li>
+			<li><a href="/login">logout</a></li>
+		</ul>
+	</div>
+</nav>
