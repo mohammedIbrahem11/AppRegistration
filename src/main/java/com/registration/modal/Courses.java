@@ -11,7 +11,7 @@ public class Courses {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "player_Sequence")
 	@SequenceGenerator(name = "player_Sequence", sequenceName = "PLAYER_SEQ")
-	private int courseId;
+	private int id;
 
 	@Column(name = "courseName")
 	private String courseName;
@@ -31,11 +31,11 @@ public class Courses {
 	@Column(name = "instructor")
 	private String instructor;
 	
-	@ManyToMany(targetEntity=Student.class, mappedBy="userName", fetch=FetchType.EAGER)
+	@ManyToMany(mappedBy="courses")
 	private List<Student> students;
 
 	public List<Student> getStudents() {
-		return students;
+		return students; 
 	}
 
 	public void setStudents(List<Student> students) {
@@ -58,11 +58,11 @@ public class Courses {
 	}
 
 	public int getCourseId() {
-		return courseId;
+		return id;
 	}
 
 	public void setCourseId(int courseId) {
-		this.courseId = courseId;
+		this.id = courseId;
 	}
 
 	public String getCourseName() {
@@ -117,7 +117,7 @@ public class Courses {
 	public String toString() {
 		return String.format(
 				"courses [courseId=%s, courseName=%s, description=%s, publishDate=%s, lastUpdated=%s, totalHours=%s, instructor=%s]",
-				courseId, courseName, description, publishDate, lastUpdated, totalHours, instructor);
+				id, courseName, description, publishDate, lastUpdated, totalHours, instructor);
 	}
 
 }

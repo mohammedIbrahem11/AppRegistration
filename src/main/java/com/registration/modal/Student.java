@@ -34,17 +34,19 @@ public class Student {
 	@Column(name = "gender")
 	private String gender;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name="courseId")
-	private List<Courses> course;
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "student_courses",
+    joinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"),
+    inverseJoinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id"))
+	private List<Courses> courses; 
 	
 	
 	public List<Courses> getCourse() {
-		return course;
+		return courses;
 	}
 
 	public void setCourse(List<Courses> course) {
-		this.course = course;
+		this.courses = course;
 	}
 
 	public Student() {

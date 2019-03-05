@@ -18,7 +18,9 @@ public class CourseService{
 	
 	private CourseRepository courseRepository;
 
-	
+	public void saveCourse(Courses course) {
+		courseRepository.save(course);
+	}
 	
 	public List<Courses> getAllCourses() {
 		List<Courses> courses = new ArrayList<Courses>();

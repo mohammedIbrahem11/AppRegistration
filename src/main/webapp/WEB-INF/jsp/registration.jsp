@@ -8,7 +8,7 @@
 			<h3>New Registration</h3>
 			<form class="form-horizontal" action="save-user" method="POST">
 				<input type="hidden" name="id" /> <input type="hidden"
-					name="courseId" />
+					name="id" />
 				<div class="form-group">
 					<label class="control-label col-md-3">Name</label>
 					<div class="col-md-7">
@@ -51,12 +51,12 @@
 					</div>
 				</div>
 				
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label class="control-label col-md-3">Course Id</label>
 					<div class="col-md-7">
 						<input type="text" class="form-control" name="courseId" />
 					</div>
-				</div>
+				</div> -->
 
 				<div class="form-group">
 					<input type="submit" class="btn btn-primary" value="Register" />
