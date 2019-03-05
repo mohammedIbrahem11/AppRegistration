@@ -57,12 +57,12 @@ public class Courses {
 		this.instructor = instructor;
 	}
 
-	public int getCourseId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setCourseId(int courseId) {
-		this.id = courseId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getCourseName() {

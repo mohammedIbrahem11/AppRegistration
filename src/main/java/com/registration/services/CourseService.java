@@ -18,6 +18,10 @@ public class CourseService{
 	
 	private CourseRepository courseRepository;
 
+	public CourseService(CourseRepository courseRepository){
+		this.courseRepository = courseRepository;
+	}
+	
 	public void saveCourse(Courses course) {
 		courseRepository.save(course);
 	}

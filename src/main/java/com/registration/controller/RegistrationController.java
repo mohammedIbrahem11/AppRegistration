@@ -56,7 +56,7 @@ public class RegistrationController {
 	}
 	
 	@RequestMapping(value="/register", method=RequestMethod.GET)
-	public String showRegistrationPage(HttpServletRequest request) {		
+	public String showRegistrationPage(@RequestParam Courses course, HttpServletRequest request) {		
 		request.setAttribute("mode", "MODE_REGISTER");
 		return "registration";
 	}
