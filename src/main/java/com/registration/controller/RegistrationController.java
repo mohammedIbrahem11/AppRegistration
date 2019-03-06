@@ -65,6 +65,8 @@ public class RegistrationController {
 	public String registerUser(@ModelAttribute Student student,BindingResult result ,HttpServletRequest request) {		
 		request.setAttribute("mode", "MODE_REGISTER_DONE");
 		request.setAttribute("name", student.getUserName());
+		
+		System.out.println("course object :" + student.getCourse());
 		userService.saveUser(student);
 		return "welcome";
 	}
@@ -96,6 +98,18 @@ public class RegistrationController {
 		   request.setAttribute("users", student.get());
 		else {
 			System.out.println(student.get().getUserName());
+		}
+		return "registration";
+	}
+	
+	@RequestMapping(value="/register_cours", method=RequestMethod.GET)
+	public String courseRegistration(@RequestParam int id, HttpServletRequest request) {		
+		request.setAttribute("mode", "MODE_COURSE_REGISTRATION");
+		Optional<Courses> course = courseService.getCourseById(id);
+		if(course != null)
+		   request.setAttribute("courses", course.get());
+		else {
+			System.out.println(course.get().getCourseName());
 		}
 		return "registration";
 	}

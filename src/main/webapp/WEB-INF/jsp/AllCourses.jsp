@@ -28,7 +28,7 @@
 						<td>${obj.lastUpdated }</td>
 						<td>${obj.totalHours}</td>
 						<td>${obj.instructor}</td>
-						<td><a href="/register?course=${obj }"> <span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td><a href="/register_cours?id=${obj.id }"> <span class="glyphicon glyphicon-pencil"></span></a></td>
 					</tr>
 
 				</c:forEach>
