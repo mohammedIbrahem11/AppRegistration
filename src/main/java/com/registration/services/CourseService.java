@@ -35,7 +35,7 @@ public class CourseService{
 		return courses;
 	}
 	
-	public Optional<Courses> getCourseById(int id) {
+	public Optional<Courses> getCourseById(String id) {
 		Optional<Courses> course = courseRepository.findById(id);
 		return course;
 	}

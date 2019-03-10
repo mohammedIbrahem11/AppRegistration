@@ -11,7 +11,7 @@ public class Courses {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "player_Sequence")
 	@SequenceGenerator(name = "player_Sequence", sequenceName = "PLAYER_SEQ")
-	private int id;
+	private String id;
 
 	@Column(name = "courseName")
 	private String courseName;
@@ -57,11 +57,11 @@ public class Courses {
 		this.instructor = instructor;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

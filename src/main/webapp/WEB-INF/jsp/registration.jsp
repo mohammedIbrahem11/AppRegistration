@@ -72,27 +72,37 @@
 			<h3>New Registration</h3>
 			<form class="form-horizontal" action="save-user" method="POST">
 				<input type="hidden" name="id" /> 
-				<input type="hidden" name="id"/>
+				<!-- <input type="hidden" name="id"/> -->
+ 
+				<div class="form-group">
+					<label class="control-label col-md-3">Course ID</label>
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="id"
+							value="${courses.id}" />
+					</div>
+				</div>
 
 				<div class="form-group">
 					<label class="control-label col-md-3">Course Name</label>
 					<div class="col-md-7">
-						<input type="text" class="form-control" name="courseName" value="${courses.courseName}"/>
+						<input type="text" class="form-control" name="courseName"
+							value="${courses.courseName}" />
 					</div>
 				</div>
-				
+
 				<div class="form-group">
 					<label class="control-label col-md-3">Course Description</label>
 					<div class="col-md-7">
-						<input type="text" class="form-control" name="courseName" value="${courses.description}"/>
+						<input type="text" class="form-control" name="courseName"
+							value="${courses.description}" />
 					</div>
 				</div>
-				
-				<input type="hidden" name="publishDate" />
-				<input type="hidden" name="lastUpdated" />
-				<input type="hidden" name="totalHours" />
-				<input type="hidden" name="instructor" />
-				
+
+				<input type="hidden" name="publishDate" value="${courses.publishDate}" /> 
+				<input type="hidden" name="lastUpdated" value="${courses.lastUpdated}" /> 
+				<input type="hidden" name="totalHours" value="${courses.totalHours}" /> 
+				<input type="hidden" name="instructor" value="${courses.instructor}" />
+
 				<div class="form-group">
 					<label class="control-label col-md-3">Name</label>
 					<div class="col-md-7">
