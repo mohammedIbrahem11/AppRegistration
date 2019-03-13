@@ -43,10 +43,20 @@
 					</div>
 				</div>
 
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label class="control-label col-md-3">Gender</label>
 					<div class="col-md-7">
 						<input type="text" class="form-control" name="gender" />
+					</div>
+				</div> -->
+				
+				<div class="form-group">
+					<label class="control-label col-md-3">Gender</label>
+					<div class="col-md-7">
+						<select class="form-control" name="gender" >
+						  <option value="male">male</option>
+						  <option value="female">female</option>
+						</select>
 					</div>
 				</div>
 
@@ -138,19 +148,22 @@
 					</div>
 				</div>
 
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label class="control-label col-md-3">Gender</label>
 					<div class="col-md-7">
 						<input type="text" class="form-control" name="gender" />
 					</div>
-				</div>
-
-				<!-- <div class="form-group">
-					<label class="control-label col-md-3">Course Id</label>
-					<div class="col-md-7">
-						<input type="text" class="form-control" name="courseId" />
-					</div>
 				</div> -->
+
+				<div class="form-group">
+					<label class="control-label col-md-3">Gender</label>
+					<div class="col-md-7">
+						<select class="form-control" name="gender" >
+						  <option value="male">male</option>
+						  <option value="female">female</option>
+						</select>
+					</div>
+				</div>
 
 				<div class="form-group">
 					<input type="submit" class="btn btn-primary" value="Register" />
@@ -224,6 +237,16 @@
 					<div class="col-md-7">
 						<input type="text" class="form-control" name="password"
 							value="${users.password}" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label col-md-3">Gender</label>
+					<div class="col-md-7">
+						<select class="form-control" name="gender" >
+						  <option value="male">male</option>
+						  <option value="female">female</option>
+						</select>
 					</div>
 				</div>
 
