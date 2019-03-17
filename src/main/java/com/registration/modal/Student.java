@@ -31,10 +31,13 @@ public class Student {
 	@Column(name = "birthDate")
 	private String birthDate;
 	
+	@Column(name = "nationality")
+	private String nationality;
+	
 	@Column(name = "gender")
 	private String gender;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = CascadeType.MERGE)
 	@JoinTable(name = "student_courses",
     joinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id"))
@@ -53,14 +56,17 @@ public class Student {
 		
 	}
 
-	public Student(String name, String email, String userName, String password, String birthDate, String gender) {
+	public Student(String name, String email, String userName, String password, String birthDate, String nationality,
+			String gender, List<Courses> courses) {
 		super();
 		this.name = name;
 		this.email = email;
 		this.userName = userName;
 		this.password = password;
 		this.birthDate = birthDate;
+		this.nationality = nationality;
 		this.gender = gender;
+		this.courses = courses;
 	}
 
 	public int getId() {
@@ -117,6 +123,14 @@ public class Student {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
 	}
 
 	@Override

@@ -13,6 +13,7 @@
 					<th>User Name</th>
 					<th>Password</th>
 					<th>Birth Date</th>
+					<th>Nationality</th>
 					<th>gender</th>
 					<th>Unregister</th>
 				</tr>
@@ -27,6 +28,7 @@
 						<td>${user.userName }</td>
 						<td>${user.password }</td>
 						<td>${user.birthDate}</td>
+						<td>${user.nationality}</td>
 						<td>${user.gender}</td>
 						<%-- <td><a href="/edit-user?id=${user.id }"> <span class="glyphicon glyphicon-pencil"></span></a></td> --%>
 						<td><a href="/delete-user?id=${user.id }"> <span class="glyphicon glyphicon-trash"></span></a></td>

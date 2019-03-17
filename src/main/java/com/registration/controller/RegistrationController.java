@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.registration.modal.Courses;
 import com.registration.modal.Student;
+import com.registration.services.CountryService;
 import com.registration.services.CourseService;
 import com.registration.services.UserService;
 
@@ -32,6 +33,9 @@ public class RegistrationController {
 	
 	@Autowired
 	CourseService courseService;
+	
+	@Autowired
+	CountryService countryService;
 	
 	@RequestMapping(value="/welcome", method=RequestMethod.GET)
 	public String showWelcomePage(HttpServletRequest request) {		
@@ -58,6 +62,7 @@ public class RegistrationController {
 	@RequestMapping(value="/register", method=RequestMethod.GET)
 	public String showRegistrationPage(HttpServletRequest request) {		
 		request.setAttribute("mode", "MODE_REGISTER");
+		request.setAttribute("countryList", countryService.getAllCountries());
 		return "registration";
 	}
 	
@@ -93,6 +98,7 @@ public class RegistrationController {
 	@RequestMapping(value="/edit-user", method=RequestMethod.GET)
 	public String editUser(@RequestParam int id, HttpServletRequest request) {		
 		request.setAttribute("mode", "MODE_UPDATE");
+		request.setAttribute("countryList", countryService.getAllCountries());
 		Optional<Student> student = userService.editUser(id);
 		if(student != null)
 		   request.setAttribute("users", student.get());
@@ -105,6 +111,7 @@ public class RegistrationController {
 	@RequestMapping(value="/register_cours", method=RequestMethod.GET)
 	public String courseRegistration(@RequestParam String id, HttpServletRequest request) {		
 		request.setAttribute("mode", "MODE_COURSE_REGISTRATION");
+		request.setAttribute("countryList", countryService.getAllCountries());
 		Optional<Courses> course = courseService.getCourseById(id);
 		if(course != null)
 		   request.setAttribute("courses", course.get());

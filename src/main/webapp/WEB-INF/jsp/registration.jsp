@@ -43,12 +43,16 @@
 					</div>
 				</div>
 
-				<!-- <div class="form-group">
-					<label class="control-label col-md-3">Gender</label>
+				<div class="form-group">
+					<label class="control-label col-md-3">Nationality</label>
 					<div class="col-md-7">
-						<input type="text" class="form-control" name="gender" />
+						<select class="form-control" name="nationality" >
+						  <c:forEach var="country" items="${countryList}">
+						      <option value="${country.countryKey }">${country.countryValue }</option>
+						  </c:forEach>
+						</select>
 					</div>
-				</div> -->
+				</div>
 				
 				<div class="form-group">
 					<label class="control-label col-md-3">Gender</label>
@@ -148,12 +152,16 @@
 					</div>
 				</div>
 
-				<!-- <div class="form-group">
-					<label class="control-label col-md-3">Gender</label>
+				<div class="form-group">
+					<label class="control-label col-md-3">Nationality</label>
 					<div class="col-md-7">
-						<input type="text" class="form-control" name="gender" />
+						<select class="form-control" name="nationality" >
+						  <c:forEach var="country" items="${countryList}">
+						      <option value="${country.countryKey }">${country.countryValue }</option>
+						  </c:forEach>
+						</select>
 					</div>
-				</div> -->
+				</div>
 
 				<div class="form-group">
 					<label class="control-label col-md-3">Gender</label>
@@ -237,6 +245,17 @@
 					<div class="col-md-7">
 						<input type="text" class="form-control" name="password"
 							value="${users.password}" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label col-md-3">Nationality</label>
+					<div class="col-md-7">
+						<select class="form-control" name="nationality" >
+						  <c:forEach var="country" items="${countryList}">
+						      <option value="${country.countryKey }">${country.countryValue }</option>
+						  </c:forEach>
+						</select>
 					</div>
 				</div>
 				
