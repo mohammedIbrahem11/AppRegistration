@@ -1,5 +1,6 @@
 package com.registration.modal;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
@@ -20,10 +21,12 @@ public class Courses {
 	private String description;
 
 	@Column(name = "publishDate")
-	private String publishDate;
+	@Temporal(TemporalType.DATE)
+	private Date publishDate;
 
 	@Column(name = "lastUpdated")
-	private String lastUpdated;
+	@Temporal(TemporalType.DATE)
+	private Date lastUpdated;
 
 	@Column(name = "totalHours")
 	private String totalHours;
@@ -46,7 +49,7 @@ public class Courses {
 
 	}
 
-	public Courses(String courseName, String description, String publishDate, String lastUpdated, String totalHours,
+	public Courses(String courseName, String description, Date publishDate, Date lastUpdated, String totalHours,
 			String instructor) {
 		super();
 		this.courseName = courseName;
@@ -81,19 +84,19 @@ public class Courses {
 		this.description = description;
 	}
 
-	public String getPublishDate() {
+	public Date getPublishDate() {
 		return publishDate;
 	}
 
-	public void setPublishDate(String publishDate) {
+	public void setPublishDate(Date publishDate) {
 		this.publishDate = publishDate;
 	}
 
-	public String getLastUpdated() {
+	public Date getLastUpdated() {
 		return lastUpdated;
 	}
 
-	public void setLastUpdated(String lastUpdated) {
+	public void setLastUpdated(Date lastUpdated) {
 		this.lastUpdated = lastUpdated;
 	}
 

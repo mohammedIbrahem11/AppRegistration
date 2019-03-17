@@ -3,6 +3,7 @@ package com.registration.modal;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
@@ -29,7 +30,8 @@ public class Student {
 	private String password;
 	
 	@Column(name = "birthDate")
-	private String birthDate;
+	@Temporal(TemporalType.DATE)
+	private Date birthDate;
 	
 	@Column(name = "nationality")
 	private String nationality;
@@ -56,7 +58,7 @@ public class Student {
 		
 	}
 
-	public Student(String name, String email, String userName, String password, String birthDate, String nationality,
+	public Student(String name, String email, String userName, String password, Date birthDate, String nationality,
 			String gender, List<Courses> courses) {
 		super();
 		this.name = name;
@@ -109,11 +111,11 @@ public class Student {
 		this.password = password;
 	}
 
-	public String getBirthDate() {
+	public Date getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(String birthDate) {
+	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
 
